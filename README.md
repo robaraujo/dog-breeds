@@ -8,7 +8,7 @@ DEMO: http://ec2-52-204-31-43.compute-1.amazonaws.com/admin
 username: admin
 password: admin
 
-#### SPA made with Vue.JS
+#### SPA made with Vue.JS: `/client` folder
 DEMO: http://ec2-52-204-31-43.compute-1.amazonaws.com/client/index.html
 
 ## Missing features and bugs
