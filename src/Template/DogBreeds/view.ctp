@@ -1,44 +1,41 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \Cake\Datasource\EntityInterface $dogBreed
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Dog Breed'), ['action' => 'edit', $dogBreed->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Dog Breed'), ['action' => 'delete', $dogBreed->id], ['confirm' => __('Are you sure you want to delete # {0}?', $dogBreed->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Dog Breeds'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Dog Breed'), ['action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="dogBreeds view large-9 medium-8 columns content">
-    <h3><?= h($dogBreed->name) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Name') ?></th>
-            <td><?= h($dogBreed->name) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Size') ?></th>
-            <td><?= h($dogBreed->size) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Image') ?></th>
-            <td><?= h($dogBreed->image) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($dogBreed->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Created') ?></th>
-            <td><?= h($dogBreed->created) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Modified') ?></th>
-            <td><?= h($dogBreed->modified) ?></td>
-        </tr>
-    </table>
-</div>
+<section class="content-header">
+  <h1>
+    Dog Breed
+    <small><?php echo __('View'); ?></small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="<?php echo $this->Url->build(['action' => 'index']); ?>"><i class="fa fa-dashboard"></i> <?php echo __('Home'); ?></a></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box box-solid">
+        <div class="box-header with-border">
+          <i class="fa fa-info"></i>
+          <h3 class="box-title"><?php echo __('Information'); ?></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <dl class="dl-horizontal">
+            <dt scope="row"><?= __('Name') ?></dt>
+            <dd><?= h($dogBreed->name) ?></dd>
+            <dt scope="row"><?= __('Size') ?></dt>
+            <dd><?= h($dogBreed->size) ?></dd>
+            <dt scope="row"><?= __('Image') ?></dt>
+            <dd><?= h($dogBreed->image) ?></dd>
+            <dt scope="row"><?= __('Id') ?></dt>
+            <dd><?= $this->Number->format($dogBreed->id) ?></dd>
+            <dt scope="row"><?= __('Created') ?></dt>
+            <dd><?= h($dogBreed->created) ?></dd>
+            <dt scope="row"><?= __('Modified') ?></dt>
+            <dd><?= h($dogBreed->modified) ?></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -56,4 +56,10 @@ class AppController extends Controller
         }
         return false;
     }
+
+    public function beforeRender(Event $event)
+    {
+        $this->viewBuilder()->setTheme('AdminLTE');
+        $this->viewBuilder()->setClassName('AdminLTE.AdminLTE');
+    }
 }

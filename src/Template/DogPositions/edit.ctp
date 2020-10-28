@@ -4,35 +4,47 @@
  * @var \App\Model\Entity\DogPosition $dogPosition
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $dogPosition->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $dogPosition->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List Dog Positions'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Dog Breeds'), ['controller' => 'DogBreeds', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Dog Breed'), ['controller' => 'DogBreeds', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="dogPositions form large-9 medium-8 columns content">
-    <?= $this->Form->create($dogPosition) ?>
-    <fieldset>
-        <legend><?= __('Edit Dog Position') ?></legend>
-        <?php
-            echo $this->Form->control('name');
-            echo $this->Form->control('dog_breed_id', ['options' => $dogBreeds]);
-            echo $this->Form->control('user_id', ['options' => $users, 'empty' => true]);
-            echo $this->Form->control('latitude');
-            echo $this->Form->control('longitude');
-            echo $this->Form->control('saw_at');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
-</div>
+<!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Dog Position
+      <small><?php echo __('Edit'); ?></small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="<?php echo $this->Url->build(['action' => 'index']); ?>"><i class="fa fa-dashboard"></i> <?php echo __('Home'); ?></a></li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title"><?php echo __('Form'); ?></h3>
+          </div>
+          <!-- /.box-header -->
+          <!-- form start -->
+          <?php echo $this->Form->create($dogPosition, ['role' => 'form']); ?>
+            <div class="box-body">
+              <?php
+                echo $this->Form->control('name');
+                echo $this->Form->control('dog_breed_id', ['options' => $dogBreeds]);
+                echo $this->Form->control('user_id', ['options' => $users, 'empty' => true]);
+                echo $this->Form->control('latitude');
+                echo $this->Form->control('longitude');
+                echo $this->Form->control('saw_at');
+              ?>
+            </div>
+            <!-- /.box-body -->
+
+          <?php echo $this->Form->submit(__('Submit')); ?>
+
+          <?php echo $this->Form->end(); ?>
+        </div>
+        <!-- /.box -->
+      </div>
+  </div>
+  <!-- /.row -->
+</section>

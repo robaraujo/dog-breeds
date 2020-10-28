@@ -10,6 +10,7 @@
         "cakephp/cakephp": "3.9.*",
         "cakephp/migrations": "^2.0.0",
         "cakephp/plugin-installer": "^1.0",
+        "maiconpinto/cakephp-adminlte-theme": "^1.1",
         "mobiledetect/mobiledetectlib": "2.*",
         "ozee31/cakephp-cors": "^1.1"
     },
