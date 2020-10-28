@@ -46,7 +46,7 @@
           <!-- Navbar Right Menu -->
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-              <li><a href="http://almsaeedstudio.com">Almsaeed Studio</a></li>
+              <li><a href="http://almsaeedstudio.com">Dog Breeds</a></li>
               <li><a href="http://almsaeedstudio.com/premium">Premium Templates</a></li>
             </ul>
           </div>
